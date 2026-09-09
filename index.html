@@ -40,22 +40,24 @@
   header .inner{
     display:flex;
     align-items:center;
-    gap:20px;
+    gap:22px;
     flex-wrap:wrap;
   }
   .avatar{
-    width:88px;
-    height:88px;
+    width:112px;
+    height:112px;
     border-radius:50%;
     background-color:var(--cream);
-    color:var(--deep-blue);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:36px;
-    font-weight:700;
+    overflow:hidden;
     flex-shrink:0;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);
+    box-shadow:0 4px 14px rgba(0,0,0,.2);
+    border:4px solid rgba(255,255,255,.35);
+  }
+  .avatar img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
   }
   header h1{
     font-size:34px;
@@ -119,7 +121,7 @@
     font-size:14px;
   }
 
-  /* 经历条目 (教育 / 实习 / 项目) */
+  /* 经历条目 */
   .entry{
     border-left:3px solid var(--border);
     padding:4px 0 22px 24px;
@@ -186,13 +188,8 @@
     color:var(--muted);
     margin-top:6px;
   }
-  .entry-sub{
-    font-size:15px;
-    color:var(--text);
-    margin-top:6px;
-  }
 
-  /* 项目卡片 (能力) */
+  /* 能力卡片 */
   .grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -244,17 +241,6 @@
     padding:8px 12px;
     align-self:flex-start;
     font-weight:500;
-  }
-
-  /* 单独块文本 */
-  .note{
-    font-size:15px;
-    color:var(--muted);
-    background-color:var(--white);
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:18px 22px;
-    margin-top:16px;
   }
 
   /* 联系方式 */
@@ -340,7 +326,7 @@
 
   <header>
     <div class="container inner">
-      <div class="avatar">林</div>
+      <div class="avatar"><img src="photo.jpg" alt="林晗雨"></div>
       <div>
         <h1>林晗雨</h1>
         <p class="subtitle">金融硕士在读 · REITs 与不动产投研</p>
@@ -351,8 +337,7 @@
   <section class="intro">
     <div class="container">
       <h2>简介</h2>
-      <p>你好，我是<strong class="highlight">林晗雨</strong>，复旦大学经济学院金融硕士（2026 级）。我专注于<strong class="highlight">持有型不动产与 REITs 投研</strong>，习惯把"经营指标—租金现金流—资产价值"拆成可验证、可评估现金流稳定性的结论。</p>
-      <p>曾在广发证券发展研究中心地产组实习，主笔太古地产深度报告；也独立完成数据清洗—基准回归—稳健性检验的全流程研究。以下是我的教育、实践与能力。</p>
+      <p>你好，我是<strong class="highlight">林晗雨</strong>，复旦大学经济学院金融硕士（2026 级）。我专注于<strong class="highlight">持有型不动产与 REITs 投研</strong>，习惯于把"经营指标—租金现金流—资产价值"拆成可验证、可评估现金流稳定性的结论。</p>
       <div class="tags">
         <span class="tag">REITs</span>
         <span class="tag">不动产投研</span>
@@ -363,34 +348,9 @@
     </div>
   </section>
 
-  <section class="education">
-    <div class="container">
-      <h2>教育经历</h2>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">复旦大学 · 经济学院</span>
-          <span class="entry-role">金融硕士（专业硕士）</span>
-          <span class="entry-date">2026.09 – 2028.06</span>
-        </div>
-        <p class="entry-sub">上海</p>
-        <p class="entry-meta">核心课程：投资组合管理（96）、Python 量化投资（94）、证券投资学（91）、计量经济学（90）、概率论（94）</p>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">安徽财经大学 · 金融工程</span>
-          <span class="entry-role">本科</span>
-          <span class="entry-date">2022.09 – 2026.06</span>
-        </div>
-        <p class="entry-sub">安徽 · GPA 4.22 / 均分 88.36</p>
-      </div>
-    </div>
-  </section>
-
   <section class="experience">
     <div class="container">
-      <h2>研究与实习经历</h2>
+      <h2>经历</h2>
 
       <div class="entry">
         <div class="entry-head">
@@ -399,48 +359,20 @@
           <span class="entry-date">2026.06 – 2026.08</span>
         </div>
         <ul class="entry-body">
-          <li>持有型物业深度研究与估值框架：主笔太古地产深度报告，搭建"经营指标—租金现金流—资产价值"分析框架；整合 2013–2025 年财务与项目数据，按香港/内地、零售/办公四类业态跟踪租金收入、出租面积、坪效、出租率与净负债率，形成 21 页研究底稿，服务底层资产运营质量与估值判断。</li>
-          <li>REITs 机制研究：跟踪领展房产基金等持有型不动产项目，搭建公司—物业—项目三级数据库，覆盖 10 年以上经营与财务指标；拆解租金收入、资产组合与资本循环，用于评估底层资产现金流的稳定性。</li>
-          <li>行业追踪与专题输出：跟踪香港住宅、零售及写字楼的成交、租金、空置率与净吸纳量；独立撰写北京住宅市场与楼盘推荐材料，并复盘公积金政策历次调整，分析其作为需求端政策抓手的作用。</li>
+          <li>主笔太古地产深度报告，搭建"经营指标—租金现金流—资产价值"分析框架；整合 2013–2025 年财务与项目数据，按香港/内地、零售/办公四类业态跟踪租金收入、出租面积、坪效、出租率与净负债率，形成 21 页研究底稿。</li>
+          <li>跟踪领展房产基金等持有型不动产项目，搭建公司—物业—项目三级数据库，覆盖 10 年以上经营与财务指标，用于评估底层资产现金流的稳定性。</li>
+          <li>跟踪香港住宅、零售及写字楼的成交、租金、空置率与净吸纳量；独立撰写北京住宅市场与楼盘推荐材料。</li>
         </ul>
       </div>
 
       <div class="entry">
         <div class="entry-head">
           <span class="entry-title">实证研究助理 · 某教授课题组</span>
-          <span class="entry-role">科研</span>
+          <span class="entry-role">课题组助理</span>
           <span class="entry-date">2024.02 – 2024.06</span>
         </div>
         <ul class="entry-body">
           <li>复现《地方公共债务与企业不动产投资：效应与机制》：独立完成数据清洗—基准回归—稳健性检验全流程，参与定期学术研讨与论文汇报。</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="practice">
-    <div class="container">
-      <h2>实践经历</h2>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">国家级大学生创新创业训练项目</span>
-          <span class="entry-role">第二负责人</span>
-          <span class="entry-date">2023.06 – 2025.04</span>
-        </div>
-        <ul class="entry-body">
-          <li>《高质量发展视阈下皖江城市区域创新能力与经济增长关系研究》（结题优秀）：搭建 16 个地级市×12 年面板数据，用 Stata 完成固定效应回归与稳健性检验，主笔理论机制与结果解读；将 22 个月任务拆分为五阶段并协调团队按期交付。</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-head">
-          <span class="entry-title">国家级专项社会实践"石榴籽祖国行"</span>
-          <span class="entry-role">团队负责人</span>
-          <span class="entry-date">2024 暑期</span>
-        </div>
-        <ul class="entry-body">
-          <li>围绕屯垦戍边中新疆兵团精神活态传承设计分层访谈方案，获有效样本 120+ 份、目标覆盖率 90% 以上；主笔校级优秀调研报告，团队获"校级优秀实践团队"。</li>
         </ul>
       </div>
 
@@ -451,19 +383,15 @@
           <span class="entry-date">2023 – 2024</span>
         </div>
         <ul class="entry-body">
-          <li>统筹 30+ 名成员排班，建立编辑部—播音部双校对流程，累计审核稿件 200+ 份，保障每日 2 时段、7 类栏目一学期零播出事故；总负责 500+ 人规模活动，对接校党委宣传部及市广播电视台。</li>
+          <li>统筹 30+ 名成员排班，建立编辑部—播音部双校对流程，累计审核稿件 200+ 份，保障每日 2 时段、7 类栏目一学期零播出事故；对接校党委宣传部及市广播电视台。</li>
         </ul>
-      </div>
-
-      <div class="note">
-        荣誉：连续两学年金融学院"学习一等奖"；校融媒体中心"十佳大学生记者"。
       </div>
     </div>
   </section>
 
   <section class="skills">
     <div class="container">
-      <h2>相关能力</h2>
+      <h2>相关技能</h2>
       <div class="grid">
 
         <div class="card">
