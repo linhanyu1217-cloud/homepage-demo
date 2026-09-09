@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>张三 · 个人主页</title>
+<title>林晗雨 · 个人主页</title>
 <style>
   :root{
     --deep-blue:#1F4E79;
@@ -119,7 +119,80 @@
     font-size:14px;
   }
 
-  /* 项目卡片 */
+  /* 经历条目 (教育 / 实习 / 项目) */
+  .entry{
+    border-left:3px solid var(--border);
+    padding:4px 0 22px 24px;
+    position:relative;
+  }
+  .entry + .entry{
+    margin-top:8px;
+  }
+  .entry::before{
+    content:"";
+    position:absolute;
+    left:-8px;
+    top:10px;
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background-color:var(--deep-blue);
+    border:3px solid var(--cream);
+  }
+  .entry-head{
+    display:flex;
+    align-items:baseline;
+    gap:12px;
+    flex-wrap:wrap;
+  }
+  .entry-title{
+    font-size:18px;
+    color:var(--deep-blue);
+    font-weight:700;
+    line-height:1.4;
+  }
+  .entry-role{
+    font-size:15px;
+    color:var(--text);
+    font-weight:600;
+  }
+  .entry-date{
+    font-size:14px;
+    color:var(--muted);
+    margin-left:auto;
+    white-space:nowrap;
+  }
+  .entry-body{
+    margin-top:8px;
+    color:var(--text);
+    list-style:none;
+  }
+  .entry-body li{
+    font-size:15px;
+    margin:6px 0;
+    padding-left:18px;
+    position:relative;
+  }
+  .entry-body li::before{
+    content:"●";
+    position:absolute;
+    left:0;
+    color:var(--deep-blue);
+    font-size:10px;
+    top:5px;
+  }
+  .entry-meta{
+    font-size:14px;
+    color:var(--muted);
+    margin-top:6px;
+  }
+  .entry-sub{
+    font-size:15px;
+    color:var(--text);
+    margin-top:6px;
+  }
+
+  /* 项目卡片 (能力) */
   .grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -171,6 +244,17 @@
     padding:8px 12px;
     align-self:flex-start;
     font-weight:500;
+  }
+
+  /* 单独块文本 */
+  .note{
+    font-size:15px;
+    color:var(--muted);
+    background-color:var(--white);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:18px 22px;
+    margin-top:16px;
   }
 
   /* 联系方式 */
@@ -246,6 +330,9 @@
     section{
       padding:44px 0;
     }
+    .entry-date{
+      margin-left:0;
+    }
   }
 </style>
 </head>
@@ -253,10 +340,10 @@
 
   <header>
     <div class="container inner">
-      <div class="avatar">张</div>
+      <div class="avatar">林</div>
       <div>
-        <h1>张三</h1>
-        <p class="subtitle">经济学本科在读 · 数据与代码爱好者</p>
+        <h1>林晗雨</h1>
+        <p class="subtitle">金融硕士在读 · REITs 与不动产投研</p>
       </div>
     </div>
   </header>
@@ -264,41 +351,140 @@
   <section class="intro">
     <div class="container">
       <h2>简介</h2>
-      <p>你好，我是<strong class="highlight">张三</strong>，一名经济学专业的本科生。在学习宏观与微观经济理论的同时，我逐渐对<strong class="highlight">数据驱动的研究方法</strong>产生了浓厚兴趣，希望通过编程与数据分析，把抽象的经济学概念变成可观察、可验证的结论。</p>
-      <p>课余时间，我自学了 Python、数据清洗与可视化工具，尝试将课堂知识迁移到真实的项目当中。以下是我近期完成的三门课程项目。</p>
+      <p>你好，我是<strong class="highlight">林晗雨</strong>，复旦大学经济学院金融硕士（2026 级）。我专注于<strong class="highlight">持有型不动产与 REITs 投研</strong>，习惯把"经营指标—租金现金流—资产价值"拆成可验证、可评估现金流稳定性的结论。</p>
+      <p>曾在广发证券发展研究中心地产组实习，主笔太古地产深度报告；也独立完成数据清洗—基准回归—稳健性检验的全流程研究。以下是我的教育、实践与能力。</p>
       <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">数据分析</span>
-        <span class="tag">经济学</span>
-        <span class="tag">可视化</span>
+        <span class="tag">REITs</span>
+        <span class="tag">不动产投研</span>
+        <span class="tag">Python 量化</span>
+        <span class="tag">财务建模</span>
+        <span class="tag">上市公司研究</span>
       </div>
     </div>
   </section>
 
-  <section class="projects">
+  <section class="education">
     <div class="container">
-      <h2>课程项目</h2>
+      <h2>教育经历</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">复旦大学 · 经济学院</span>
+          <span class="entry-role">金融硕士（专业硕士）</span>
+          <span class="entry-date">2026.09 – 2028.06</span>
+        </div>
+        <p class="entry-sub">上海</p>
+        <p class="entry-meta">核心课程：投资组合管理（96）、Python 量化投资（94）、证券投资学（91）、计量经济学（90）、概率论（94）</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">安徽财经大学 · 金融工程</span>
+          <span class="entry-role">本科</span>
+          <span class="entry-date">2022.09 – 2026.06</span>
+        </div>
+        <p class="entry-sub">安徽 · GPA 4.22 / 均分 88.36</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <div class="container">
+      <h2>研究与实习经历</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">广发证券 · 发展研究中心地产组</span>
+          <span class="entry-role">行业研究实习生</span>
+          <span class="entry-date">2026.06 – 2026.08</span>
+        </div>
+        <ul class="entry-body">
+          <li>持有型物业深度研究与估值框架：主笔太古地产深度报告，搭建"经营指标—租金现金流—资产价值"分析框架；整合 2013–2025 年财务与项目数据，按香港/内地、零售/办公四类业态跟踪租金收入、出租面积、坪效、出租率与净负债率，形成 21 页研究底稿，服务底层资产运营质量与估值判断。</li>
+          <li>REITs 机制研究：跟踪领展房产基金等持有型不动产项目，搭建公司—物业—项目三级数据库，覆盖 10 年以上经营与财务指标；拆解租金收入、资产组合与资本循环，用于评估底层资产现金流的稳定性。</li>
+          <li>行业追踪与专题输出：跟踪香港住宅、零售及写字楼的成交、租金、空置率与净吸纳量；独立撰写北京住宅市场与楼盘推荐材料，并复盘公积金政策历次调整，分析其作为需求端政策抓手的作用。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">实证研究助理 · 某教授课题组</span>
+          <span class="entry-role">科研</span>
+          <span class="entry-date">2024.02 – 2024.06</span>
+        </div>
+        <ul class="entry-body">
+          <li>复现《地方公共债务与企业不动产投资：效应与机制》：独立完成数据清洗—基准回归—稳健性检验全流程，参与定期学术研讨与论文汇报。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="practice">
+    <div class="container">
+      <h2>实践经历</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">国家级大学生创新创业训练项目</span>
+          <span class="entry-role">第二负责人</span>
+          <span class="entry-date">2023.06 – 2025.04</span>
+        </div>
+        <ul class="entry-body">
+          <li>《高质量发展视阈下皖江城市区域创新能力与经济增长关系研究》（结题优秀）：搭建 16 个地级市×12 年面板数据，用 Stata 完成固定效应回归与稳健性检验，主笔理论机制与结果解读；将 22 个月任务拆分为五阶段并协调团队按期交付。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">国家级专项社会实践"石榴籽祖国行"</span>
+          <span class="entry-role">团队负责人</span>
+          <span class="entry-date">2024 暑期</span>
+        </div>
+        <ul class="entry-body">
+          <li>围绕屯垦戍边中新疆兵团精神活态传承设计分层访谈方案，获有效样本 120+ 份、目标覆盖率 90% 以上；主笔校级优秀调研报告，团队获"校级优秀实践团队"。</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">校融媒体中心广播台</span>
+          <span class="entry-role">播音部部长</span>
+          <span class="entry-date">2023 – 2024</span>
+        </div>
+        <ul class="entry-body">
+          <li>统筹 30+ 名成员排班，建立编辑部—播音部双校对流程，累计审核稿件 200+ 份，保障每日 2 时段、7 类栏目一学期零播出事故；总负责 500+ 人规模活动，对接校党委宣传部及市广播电视台。</li>
+        </ul>
+      </div>
+
+      <div class="note">
+        荣誉：连续两学年金融学院"学习一等奖"；校融媒体中心"十佳大学生记者"。
+      </div>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <h2>相关能力</h2>
       <div class="grid">
 
         <div class="card">
-          <div class="icon">📈</div>
-          <h3>AI 就业监测小站</h3>
-          <p>抓取并整理招聘平台数据，追踪人工智能相关岗位的需求变化，并结合经济指标分析行业趋势，输出周报。</p>
-          <div class="course">计量经济学 · 课程设计</div>
+          <div class="icon">📊</div>
+          <h3>数据与研究</h3>
+          <p>Python（数据处理、量化）、Stata、SPSS、EViews、Excel（函数/透视表）；熟悉上市公司财报、持有型物业与不动产项目数据，掌握 REITs 底层资产"经营—现金流—估值"分析框架。</p>
+          <div class="course">核心方向</div>
         </div>
 
         <div class="card">
-          <div class="icon">🗺️</div>
-          <h3>历时词向量可视化</h3>
-          <p>利用词向量模型观察经济类词汇在不同年代的语义变迁，并用降维方法将结果可视化，辅助理解观念演变。</p>
-          <div class="course">文本挖掘 · 小组项目</div>
+          <div class="icon">🛠️</div>
+          <h3>工具与表达</h3>
+          <p>Wind/iFind、PowerPoint、Visio、LaTeX、Word；可独立完成研究底稿、图表制作、专题报告与路演材料。</p>
+          <div class="course">研究与输出</div>
         </div>
 
         <div class="card">
-          <div class="icon">🧹</div>
-          <h3>判决书数据清洗</h3>
-          <p>对海量法律判决书进行去噪与结构化处理，提取标的额、地区等字段，为后续实证研究提供干净的数据集。</p>
-          <div class="course">数据科学导论 · 实验作业</div>
+          <div class="icon">🌐</div>
+          <h3>语言能力</h3>
+          <p>CET-4 553、CET-6 456、考研英语二 86 分，可阅读中英文研究报告与港股/美股披露材料。</p>
+          <div class="course">CET-4 / CET-6</div>
         </div>
 
       </div>
@@ -308,18 +494,26 @@
   <section class="contact">
     <div class="container">
       <h2>联系方式</h2>
-      <p class="intro-line">如果你对我的项目感兴趣，或者有任何交流与合作的想法，欢迎随时联系我。</p>
+      <p class="intro-line">欢迎交流 REITs、不动产投研与量化研究相关的实习与合作机会。</p>
       <div class="contact-items">
         <div class="contact-item">
+          <span class="label">电话</span>
+          <a href="tel:15258777542">15258777542</a>
+        </div>
+        <div class="contact-item">
           <span class="label">邮箱</span>
-          <a href="mailto:zhangsan@example.com">zhangsan@example.com</a>
+          <a href="mailto:15258777542@163.com">15258777542@163.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="label">城市</span>
+          <span>上海</span>
         </div>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2026 张三 · 用数据理解世界
+    © 2026 林晗雨 · 用现金流度量价值
   </footer>
 
 </body>
