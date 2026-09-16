@@ -1,0 +1,28 @@
+﻿# 密钥与本地配置
+.env
+.env.*
+!.env.example
+
+# 运行产物（**绝不入库**：含真实公告 PDF、周报成品、运行日志）
+02_待处理/
+04_工作区/
+05_输出/
+日志/
+*.log
+
+# 01_模板 内含**真实交付物本体**（公司公告周报模板.docx = 已完成周报成品；
+# 房地产周报PPT模板.pptx = 内部非正式交付物），**不入库**。
+# 若日后要纳入版本管理，删掉下面这一行即可。
+01_模板/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
