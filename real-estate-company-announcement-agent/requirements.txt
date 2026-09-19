@@ -1,0 +1,15 @@
+# 地产公司公告 Agent —— Python 依赖
+#
+# 安装（只需一次）：
+#     pip install -r requirements.txt
+#
+# 注意：Agent 自己**不会**自动安装任何包。
+#       init 只检查是否齐全，缺了只会提示你手工执行上面这条命令。
+#
+# 版本下限按 Python 3.10+ 写，不锁死小版本，避免和已有环境打架。
+
+python-docx>=1.1.0      # 读写 Word：套模板、渲染周报
+python-pptx>=0.6.23     # 生成 PPT 页
+openpyxl>=3.1.0         # Excel 结构化读写
+lxml>=5.0.0             # XML 解析支持
+Pillow>=10.0.0          # 图片处理支持

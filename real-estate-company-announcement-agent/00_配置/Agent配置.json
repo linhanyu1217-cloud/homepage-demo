@@ -1,0 +1,72 @@
+{
+  "_说明": "地产公司公告 Agent 运行配置。本文件属于发行版，路径一律相对项目根目录，不得写入任何密钥。API Key 只能放在 .env 里。",
+
+  "input": {
+    "root": "02_待处理",
+    "parts": ["A股公告", "港股公告", "研报", "新闻资讯"],
+    "week_dir_pattern": "^W(\\d{1,2})公司公告$",
+    "ignore_temp_prefix": "~$"
+  },
+
+  "output": {
+    "root": "05_输出",
+    "week_dir_example": "2026-W38",
+    "done_flag": "done.flag"
+  },
+
+  "workspace": {
+    "root": "04_工作区",
+    "locks": "04_工作区\\locks",
+    "inventory": "04_工作区\\盘点"
+  },
+
+  "logs": {
+    "root": "日志",
+    "agent": "日志\\agent_YYYYMMDD.log",
+    "watcher": "日志\\watcher_YYYYMMDD.log",
+    "run": "日志\\run_YYYYMMDD-HHMMSS.log",
+    "forbidden_content": ["API Key", "ANTHROPIC_AUTH_TOKEN 的值", "GitHub Token", "其他密钥"]
+  },
+
+  "templates": {
+    "root": "01_模板",
+    "word": "01_模板\\公司公告周报模板.docx",
+    "ppt": "01_模板\\房地产周报PPT模板.pptx",
+    "readonly": true
+  },
+
+  "watcher": {
+    "stable_minutes": 5,
+    "max_auto_retries": 2,
+    "scan_interval_seconds": 30,
+    "failure_cooldown_minutes": 5,
+    "include_subdirectories": true,
+    "internal_buffer_size": 65536,
+    "events": ["Created", "Changed", "Renamed", "Deleted"],
+    "task_name": "RealEstateCompanyAnnouncementAgentWatcher",
+    "only_latest_common_week": true,
+    "call_model_in_watcher": false
+  },
+
+  "ppt": {
+    "approx_lines_per_item": 3,
+    "max_title_chars": 34,
+    "max_entry_chars": 207,
+    "line_budget": 21,
+    "never_shrink_font": true,
+    "title_red_bold": true,
+    "title_ends_with_full_stop": true
+  },
+
+  "language": {
+    "hk_output": "simplified_chinese",
+    "keep_numbers_unchanged": true,
+    "keep_english_abbr_unchanged": true
+  },
+
+  "release": {
+    "name": "地产公司公告Agent",
+    "zip_name": "地产公司公告Agent.zip",
+    "exclude": [".env", "00_配置\\个人配置.json", "03_个人资料", "05_输出", "04_工作区", "日志", "发行版\\*.zip", ".git"]
+  }
+}
