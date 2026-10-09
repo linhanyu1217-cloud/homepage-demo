@@ -1,0 +1,36 @@
+{
+  "review_type": "AI_source_check_not_human_signoff",
+  "rows": 72,
+  "unique_questions": 12,
+  "distinct_wordings": 24,
+  "strict_fact_definition": "回答覆盖核心问题，金额/单位/口径正确，且没有重大附加错误；引用独立评分，截断导致未答完核心问题为不通过。",
+  "core_definition": "只判核心回答，附加错误不计入此辅助指标。",
+  "summary": {
+    "base": {
+      "n": 24,
+      "fact_pass": 0,
+      "citation_pass": 0,
+      "core_pass": 0
+    },
+    "lora": {
+      "n": 24,
+      "fact_pass": 0,
+      "citation_pass": 0,
+      "core_pass": 0
+    },
+    "rag_base": {
+      "n": 24,
+      "fact_pass": 8,
+      "citation_pass": 6,
+      "core_pass": 13
+    }
+  },
+  "limitations": [
+    "12道独立题、每道2种问法，不是24个独立样本",
+    "QA-0151换问法多问层次，QA-0532换问法限定普通口径，非严格等义；不能将问法差异全归因泛化",
+    "默认276训练样本中252条未逐条PDF复核",
+    "原训练日志model_revision为null；实际软件版本已记录",
+    "AI复核不替代用户人工确认；董秘口径尚未人工评分",
+    "RAG保留原答案和所有失败；未重跑或挑掉失败题"
+  ]
+}

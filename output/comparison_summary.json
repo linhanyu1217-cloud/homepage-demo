@@ -1,0 +1,115 @@
+{
+  "status": "训练与72份模型回答已完成；逐条复核评分已填写",
+  "generated": true,
+  "semantic_review_complete": true,
+  "cells": [
+    {
+      "membership": "seen",
+      "wording": "original",
+      "route": "base",
+      "n": 6,
+      "token_recall": 0.27121666666666666,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "seen",
+      "wording": "original",
+      "route": "lora",
+      "n": 6,
+      "token_recall": 0.38131666666666664,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "seen",
+      "wording": "original",
+      "route": "rag_base",
+      "n": 6,
+      "token_recall": 0.5385833333333333,
+      "human_fact_accuracy": 0.5,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "seen",
+      "wording": "paraphrase",
+      "route": "base",
+      "n": 6,
+      "token_recall": 0.23071666666666668,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "seen",
+      "wording": "paraphrase",
+      "route": "lora",
+      "n": 6,
+      "token_recall": 0.3104,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "seen",
+      "wording": "paraphrase",
+      "route": "rag_base",
+      "n": 6,
+      "token_recall": 0.4503833333333333,
+      "human_fact_accuracy": 0.3333333333333333,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "original",
+      "route": "base",
+      "n": 6,
+      "token_recall": 0.306,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "original",
+      "route": "lora",
+      "n": 6,
+      "token_recall": 0.4153,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "original",
+      "route": "rag_base",
+      "n": 6,
+      "token_recall": 0.41218333333333335,
+      "human_fact_accuracy": 0.5,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "paraphrase",
+      "route": "base",
+      "n": 6,
+      "token_recall": 0.2763833333333333,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "paraphrase",
+      "route": "lora",
+      "n": 6,
+      "token_recall": 0.31851666666666667,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    },
+    {
+      "membership": "unseen",
+      "wording": "paraphrase",
+      "route": "rag_base",
+      "n": 6,
+      "token_recall": 0.3478333333333333,
+      "human_fact_accuracy": 0.0,
+      "human_reviewed": 6
+    }
+  ]
+}

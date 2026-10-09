@@ -1,0 +1,154 @@
+{
+  "status": "TRAINING_COMPLETED",
+  "model_id": "Qwen/Qwen3.5-2B",
+  "model_revision": null,
+  "gpu": "Tesla T4",
+  "epochs": 2,
+  "max_length": 1024,
+  "reviewed_only": false,
+  "train_samples_used": 276,
+  "validation_samples_used": 15,
+  "unreviewed_training_records": 252,
+  "r": 8,
+  "alpha": 16,
+  "learning_rate": 0.0001,
+  "seconds": 839.8,
+  "packages": {
+    "torch": "2.11.0+cu130",
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "datasets": "4.8.5",
+    "accelerate": "1.15.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "training_data_sha256": "1a1e7915632e17964769a285dddeb68b2ef1b77ae6b5749e7ea59a3e8c722159",
+  "rejected_oversize_samples": [],
+  "loss_history": [
+    {
+      "loss": 2.091143035888672,
+      "grad_norm": 2.264141082763672,
+      "learning_rate": 5.714285714285714e-05,
+      "epoch": 0.14492753623188406,
+      "step": 5
+    },
+    {
+      "loss": 1.7265081405639648,
+      "grad_norm": 1.773124098777771,
+      "learning_rate": 9.682539682539682e-05,
+      "epoch": 0.2898550724637681,
+      "step": 10
+    },
+    {
+      "loss": 1.4758605003356933,
+      "grad_norm": 1.2221858501434326,
+      "learning_rate": 8.888888888888889e-05,
+      "epoch": 0.43478260869565216,
+      "step": 15
+    },
+    {
+      "loss": 1.3531920433044433,
+      "grad_norm": 1.5496827363967896,
+      "learning_rate": 8.095238095238096e-05,
+      "epoch": 0.5797101449275363,
+      "step": 20
+    },
+    {
+      "loss": 1.3744843482971192,
+      "grad_norm": 1.2367994785308838,
+      "learning_rate": 7.301587301587302e-05,
+      "epoch": 0.7246376811594203,
+      "step": 25
+    },
+    {
+      "loss": 1.2921195030212402,
+      "grad_norm": 1.5683993101119995,
+      "learning_rate": 6.507936507936509e-05,
+      "epoch": 0.8695652173913043,
+      "step": 30
+    },
+    {
+      "loss": 1.1935881614685058,
+      "grad_norm": 1.999440312385559,
+      "learning_rate": 5.714285714285714e-05,
+      "epoch": 1.0,
+      "step": 35
+    },
+    {
+      "eval_loss": 0.882327675819397,
+      "eval_runtime": 7.5452,
+      "eval_samples_per_second": 1.988,
+      "eval_steps_per_second": 1.988,
+      "epoch": 1.0,
+      "step": 35
+    },
+    {
+      "loss": 1.078767967224121,
+      "grad_norm": 1.5324262380599976,
+      "learning_rate": 4.9206349206349204e-05,
+      "epoch": 1.144927536231884,
+      "step": 40
+    },
+    {
+      "loss": 1.1067230224609375,
+      "grad_norm": 1.599382996559143,
+      "learning_rate": 4.126984126984127e-05,
+      "epoch": 1.289855072463768,
+      "step": 45
+    },
+    {
+      "loss": 1.0246421813964843,
+      "grad_norm": 1.3386776447296143,
+      "learning_rate": 3.3333333333333335e-05,
+      "epoch": 1.434782608695652,
+      "step": 50
+    },
+    {
+      "loss": 0.9369629859924317,
+      "grad_norm": 1.58737313747406,
+      "learning_rate": 2.5396825396825397e-05,
+      "epoch": 1.5797101449275361,
+      "step": 55
+    },
+    {
+      "loss": 1.0341135025024415,
+      "grad_norm": 1.4710280895233154,
+      "learning_rate": 1.746031746031746e-05,
+      "epoch": 1.7246376811594204,
+      "step": 60
+    },
+    {
+      "loss": 1.1417123794555664,
+      "grad_norm": 1.340238332748413,
+      "learning_rate": 9.523809523809523e-06,
+      "epoch": 1.8695652173913042,
+      "step": 65
+    },
+    {
+      "loss": 1.1020541191101074,
+      "grad_norm": 1.888074517250061,
+      "learning_rate": 1.5873015873015873e-06,
+      "epoch": 2.0,
+      "step": 70
+    },
+    {
+      "eval_loss": 0.7963447570800781,
+      "eval_runtime": 7.5275,
+      "eval_samples_per_second": 1.993,
+      "eval_steps_per_second": 1.993,
+      "epoch": 2.0,
+      "step": 70
+    },
+    {
+      "train_runtime": 838.6593,
+      "train_samples_per_second": 0.658,
+      "train_steps_per_second": 0.083,
+      "total_flos": 1164329484806400.0,
+      "train_loss": 1.2808479922158378,
+      "epoch": 2.0,
+      "step": 70
+    }
+  ],
+  "test_used_for_training": false,
+  "prompt_tokens_masked": true,
+  "source_text_in_training_prompt": false
+}

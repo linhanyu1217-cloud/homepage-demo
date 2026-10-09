@@ -1,0 +1,26 @@
+{
+  "checks_passed": [
+    "train/test: source pages isolated",
+    "train/validation: source pages isolated",
+    "test/validation: source pages isolated",
+    "four cells: 6 questions each",
+    "Arabic and Chinese year/period parsing",
+    "BM25 + filters + two-year coverage",
+    "reviewed scope, cross-page and unnumbered-page corrections",
+    "QA regeneration preserves human review fields",
+    "all Python scripts parse",
+    "Colab notebook structure and Python cells validated",
+    "Two real hybrid retrieval cases completed",
+    "Both PDF layouts rendered and visually inspected, one page each"
+  ],
+  "retrieval_cases": 2,
+  "gpu_training_executed": true,
+  "model_answer_comparison_executed": true,
+  "remaining": [
+    "Fill in actual repository URL"
+  ],
+  "gpu": "Tesla T4",
+  "model_answers": 72,
+  "review_rows": 72,
+  "review_method": "Source-backed assistant review, not independent human re-review"
+}

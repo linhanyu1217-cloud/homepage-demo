@@ -1,0 +1,13 @@
+{
+  "status": "GENERATION_COMPLETED_REVIEW_PENDING",
+  "cases": 24,
+  "routes": [
+    "base",
+    "lora",
+    "rag_base"
+  ],
+  "same_model_id": "Qwen/Qwen3.5-2B",
+  "greedy": true,
+  "reference_answers_in_prompts": false,
+  "human_scores_pending": true
+}

@@ -1,0 +1,30 @@
+{
+  "raw": 300,
+  "clean": 300,
+  "audit_count": 30,
+  "categories": {
+    "income": 5,
+    "balance": 5,
+    "cashflow": 5,
+    "compare": 5,
+    "subjective": 5,
+    "metric": 5
+  },
+  "content_revision_count": 6,
+  "cross_page_count": 7,
+  "original_answer_page_errors": 2,
+  "split_counts": {
+    "train": 276,
+    "validation": 15,
+    "test": 9
+  },
+  "split_grouping": "same-source-file-and-page connected components",
+  "reviewed_training_count": 24,
+  "unreviewed_training_count": 252,
+  "test_reference_count": 6,
+  "seen_reference_count": 6,
+  "eval_cases": 24,
+  "excluded": 0,
+  "model_experiment_status": "COLAB_TRAINING_AND_72_ANSWERS_COMPLETED",
+  "review_policy": "AI复核30条，保留13条用户既有人工记录；其余不标已验证。默认教学试验允许未抽检样本，另提供reviewed_only文件。"
+}
